@@ -1,0 +1,8 @@
+<p>{{recibeHijo}}</p>
+
+<div>
+    <label for="entrada">Escribi un mensaje para el padre</label>
+    <!--Para usar el ngModel, recordar que hay que importar el FormModel-->
+    <input type="text" id="entrada" [(ngModel)]="mensaje">
+    <button  type="button" (click)="enviarMensaje()">Enviar</button>
+</div>
