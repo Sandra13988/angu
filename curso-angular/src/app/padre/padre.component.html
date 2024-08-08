@@ -1,3 +1,5 @@
+<h2>{{fecha | date:"YYYY/MM/dd"}}</h2>
+
 <h1>Contador: </h1>
 <p>{{valorContador}}</p>
 
@@ -22,6 +24,11 @@
 <!--Prueba de servicios-->
 
 
-<h1 appEstiloGermanos>{{nombre}}</h1>
+<h1 appEstiloGermanos>{{nombre | miPipePersonalizado}}</h1>
+<!-- 
+Asi sería con la directiva
+<h1 appEstiloGermanos>{{nombre | miPipePersonalizado}}</h1>
+-->
+
 <button (click)="saludar()">Saludar</button>
 <button (click)="preguntar()">Preguntar</button>

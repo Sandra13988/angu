@@ -4,11 +4,19 @@ import { FormsModule } from '@angular/forms';
 import { HermanoComponent } from '../hermano/hermano.component';
 import { ServicioFamiliarService } from '../servicio-familiar.service';
 import { EstiloGermanosDirective } from '../estilo-germanos.directive';
+import { MiPipePersonalizadoPipe } from '../mi-pipe-personalizado.pipe';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-padre',
   standalone: true,
-  imports: [HijoComponent, FormsModule, HermanoComponent, EstiloGermanosDirective],
+  imports: [HijoComponent, 
+            FormsModule, 
+            HermanoComponent, 
+            EstiloGermanosDirective,
+            MiPipePersonalizadoPipe,
+            CommonModule
+          ],
   templateUrl: './padre.component.html',
   styleUrl: './padre.component.css'
 })
@@ -21,6 +29,8 @@ export class PadreComponent implements OnInit{
 
   mensajePadre = "Mensaje desde el padre al hijo"
   reciboMensajeDelHijo: string = "";
+
+  fecha?: Date = new Date();
 
   //Funcion que recibe el evento y le pasa ese valor a la variable reciboMensaje
   recibirMensaje($event:string){

@@ -1,11 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { ServicioFamiliarService } from '../servicio-familiar.service';
 import { EstiloGermanosDirective } from '../estilo-germanos.directive';
+import { MiPipePersonalizadoPipe } from '../mi-pipe-personalizado.pipe';
 
 @Component({
   selector: 'app-hermano',
   standalone: true,
-  imports: [EstiloGermanosDirective],
+  imports: [
+    EstiloGermanosDirective,
+    MiPipePersonalizadoPipe         
+  ],
   templateUrl: './hermano.component.html',
   styleUrl: './hermano.component.css'
 })
